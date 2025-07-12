@@ -1,0 +1,6 @@
+streamlit
+langchain
+langchain-google-genai
+google-generativeai
+
+# pydantic==1.10.13
