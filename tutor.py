@@ -46,8 +46,11 @@ algo = st.selectbox("📚 Select a Machine Learning Algorithm:",
                     ["LogisticRegression", "SVM", "SVC", "RandomForestClassifier", "Xgboost", "DecisionTreeClassifier"])
 
 # Load API key
-with open("E:/LANGCHAIN/keys/key.txt") as f:
-    GOOGLE_API_KEY = f.read().strip()
+# with open("E:/LANGCHAIN/keys/key.txt") as f:
+#     GOOGLE_API_KEY = f.read().strip()
+import os
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+
 
 # Chat model setup
 chat_model = ChatGoogleGenerativeAI(google_api_key=GOOGLE_API_KEY, model="gemini-1.5-flash")
